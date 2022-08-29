@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Ana Sayfa</h1>
+<h3 class="a"></h3>
+<h3 class="a"></h3>
+
+
+<ol>
+    <li>Almanya</li>
+    <li>Avusturya</li>
+    <li>Ablahama</li>
+    <li>Pakistan</li>
+    <li>Türkiye</li>
+</ol>
+
+<p class="a"></p>
+<p class="a"></p>
+<p class="a"></p>
+<p class="a"></p>
+<p class="a"></p>
+
+
+
+
+    <ul>
+    <li><a href="index.html">Ana Sayfa</a></li>
+    <li><a href="ders1.html">Ders 1</a></li>
+    <li><a href="ders2.html">Ders 2</a></li>
+    <li><a href="ders3.html">Ders 3</a></li>
+    <li> <a href="ders4.html">Ders 4</a></li>
+    <li><a href="ders5.html">Ders 5</a></li>
+    <li><a href="ders6.html">Ders 6</a></li>
+</ul>
+
+
+<script>
+    var baslik = document.getElementById("baslik");
+    var metin = document.getElementById("metin");
+    metin.innerHTML=baslik.innerHTML;
+
+    var listeler=document.getElementsByTagName("ol");
+    var ulkeler=listeler[0];
+    var ulkeElamanlari =ulkeler.getElementsByTagName("li"); 
+    console.log(typeof(ulkeElamanlari));
+
+    for(i=0; i<ulkeElamanlari.length; i++) {
+        console.log(ulkeElamanlari[i].innerHTML);
+        if(ulkeElamanlari[i].innerHTML=="Almanya"){
+          //  alert("etme");
+        }
+    }
+
+    var aClassOlanlar=document.getElementsByClassName("a");
+    for(i=0; i<ulkeElamanlari.length; i++) {
+    aClassOlanlar[i].innerHTML=ulkeElamanlari[i].innerHTML;
+    }
+
+    
+
+
+</script>
+
+</body>
+</html>
